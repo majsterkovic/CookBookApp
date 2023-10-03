@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- White circle -->
+<item
+    android:height="190dp"
+    android:top="180dp">
+  <shape android:shape="oval">
+    <solid android:color="#BC3D3D"/>
+  </shape>
+</item>
+  <item>
+    <vector
+        android:width="800dp"
+        android:height="800dp"
+        android:viewportWidth="52.946"
+        android:viewportHeight="52.946">
+      <path
+          android:pathData="M26.474,9.588C13.318,9.588 0,12.043 0,16.736v0.148c0,14.598 11.876,26.474 26.474,26.474c14.597,0 26.473,-11.876 26.473,-26.474v-0.148C52.946,12.043 39.629,9.588 26.474,9.588zM26.474,11.588c14.939,0 24.473,3.049 24.473,5.148s-9.533,5.148 -24.473,5.148c-14.938,0 -24.473,-3.05 -24.474,-5.148C2,14.637 11.534,11.588 26.474,11.588z"
+          android:fillColor="#000000"/>
+    </vector>
+  </item>
+
+</layer-list>

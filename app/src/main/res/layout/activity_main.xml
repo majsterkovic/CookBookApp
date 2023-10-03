@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/animation_container">
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/toolbar_main"
+                android:id="@+id/toolbar"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/search_query_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:visibility="gone">
+<!--            <fragment-->
+<!--                android:id="@+id/search"-->
+<!--                android:name="put.poznan.cookbook.TabFragment"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"/>-->
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/toolbar"
+                app:layout_anchorGravity="bottom"
+                android:contentDescription="@string/tabs"/>
+        </androidx.viewpager.widget.ViewPager>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
+</FrameLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <FrameLayout
+                        android:id="@+id/timer_config_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/textTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="24sp"
+                        android:text="@string/dish_name"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/textDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
+                        android:text="@string/dish_recipe" />
+
+                    <TextView
+                        android:id="@+id/textIngredients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="18sp"
+                        android:text="@string/dish_ingredients"/>
+
+                    <TextView
+                        android:id="@+id/textInstructions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="@string/dish_instructions" />
+
+                    <TextView
+                        android:id="@+id/textCalories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/dish_calories" />
+
+                    <TextView
+                        android:id="@+id/textServings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/dish_servings" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/decrementButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="@string/minus" />
+
+                            <TextView
+                                android:id="@+id/servingsNumberPickerTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:padding="10dp"/>
+
+                            <Button
+                                android:id="@+id/incrementButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="@string/plus" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_share"
+        android:contentDescription="@string/share_button"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
